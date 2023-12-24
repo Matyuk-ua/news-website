@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <link rel="stylesheet" type="text/css" href="../static/main_page_style.css">
+</head>
+
+<body>
+    <script src="../static/jsfile.js"></script>
+    <header>
+        <div id = "cap"></div>
+    </header>
+    {%block content%}
+    <div id="main_news">
+        <div id="img_main_side">
+            
+                <img src="{{latest_news_list.first.img.url}}" alt="Main News Image">
+        </div>
+        <div id="text_main_side">
+            <div class="title_space">
+                {{latest_news_list.first.title}}
+            </div>
+            {{latest_news_list.first.text}}
+        </div>
+    </div>
+    <div class="other_news">
+        <div class="img_side"></div>
+        <div class="text_side">
+            <div class="title_space">
+            </div>
+        </div>
+    </div>
+    {%endblock%}
+</body>
+
+</html> 

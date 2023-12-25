@@ -71,6 +71,7 @@ body{
     height: 500px;
     width: 50%;
     border: 10px solid whitesmoke; 
+    overflow: hidden;
     text-overflow: ellipsis;
     font-size: 36px;
     color: whitesmoke;

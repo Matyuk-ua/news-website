@@ -20,8 +20,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.news_view, name='news'),
-    path('', views.index, name='index'),    
-    path('', views.home, name='home'),  # Підключення вигляду home до кореневого URL
-    path('Add-news/', views.add_news_page, name='add_news_page'),
+    path('', views.index, name='index'), 
 ]

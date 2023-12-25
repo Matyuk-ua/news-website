@@ -7,5 +7,5 @@ class NewsModel(models.Model):
     text = models.TextField()
     img = models.ImageField(upload_to='images/')
 
-    def str(self) -> str:
-        return self.title
+    def str(self):
+        return self.id

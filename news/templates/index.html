@@ -7,26 +7,33 @@
     <link rel="stylesheet" type="text/css" href="../static/main_page_style.css">
 </head>
 <body>
+    <script src = "../static/jsfile.js"></script>
     {% csrf_token %}
     <header>
         <div id = "cap"></div>
     </header>
     {%block content%}
+        {% with first_news=latest_news_list.0 %}
         <div id="main_news">
             <div id="img_main_side">
-                <img src="{{news.img.url}}" alt="Main News Image">
+                <img src="{{first_news.img}}" alt="Main News Image" style="
+                max-height: 800px;
+                width: 100%;">
             </div>
             <div id="text_main_side">
                 <div class="title_space">
-                    {{news.title}}
+                    {{first_news.title}}
                 </div>
-                {{news.text}}
+                {{first_news.text}}
             </div>
         </div>
+        {% endwith %}
         {% for news in latest_news_list|slice:"1:" %}
         <div class="other_news">
             <div class="img_side">
-                <img src="{{news.img.url}}" alt="News Image">
+                <img src="{{news.img}}" alt="News Image" style="
+                max-height: 500px;
+                width: 100%; ">
             </div>
             <div class="text_side">
                 <div class="title_space">

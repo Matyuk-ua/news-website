@@ -71,6 +71,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'news.wsgi.application'
 
+#Media folder
+
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images/')
+
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
